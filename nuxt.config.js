@@ -24,6 +24,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/firebase',
+    '~/plugins/auth',
+    '~/plugins/area',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,5 +43,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        use: 'file-loader',
+        exclude: /(node_modules)/
+      });
+    }
   }
 }
