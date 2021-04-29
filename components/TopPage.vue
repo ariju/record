@@ -29,7 +29,7 @@
             <p class="post-meta font-weight-bold mx-6 title">
               このアプリはカレンダーを使用して、その日、自分がやったトレーニングを、
               記録できるアプリです。記録機能の他に自分の体重、身長を入力して、
-              BMI指数を図る機能とトレーニングの時に使用出来るカウントダウンタイマーが
+              BMI指数を測る機能とトレーニングの時に使用出来るカウントダウンタイマーが
               ついています。
             </p>
           </div>
@@ -37,7 +37,14 @@
       </div>
     </v-card>
     <h2 class="text-center ma-6">アプリで出来ること</h2>
-    <h2 class="text-center" style="color: gray">bmi指数を図る</h2>
+    <h2 class="text-center ma-10 color" style="color: gray">
+      BMI数値を測る
+    </h2>
+    <div class="text-center mb-8">
+      <v-btn nuxt-link to="/bmi" width="180px" style="background-color: #C0C0C0"
+        >bmi指数を測るページへ</v-btn
+      >
+    </div>
     <v-card class="text-center">
       <video
         :src="require('@/assets/videos/bmivideos.mp4')"
@@ -47,6 +54,11 @@
       ></video>
     </v-card>
     <h2 class="text-center ma-10" style="color: gray">calendarに記録をとる</h2>
+    <div class="text-center mb-8">
+      <v-btn nuxt-link to="/calendar" width="180px" style="background-color: #C0C0C0"
+        >calendarページへ</v-btn
+      >
+    </div>
     <v-card class="text-center">
       <video
         :src="require('@/assets/videos/calendar.mp4')"
@@ -59,6 +71,11 @@
     <h2 class="text-center ma-10 color" style="color: gray">
       カウントダウンタイマー
     </h2>
+    <div class="text-center mb-8">
+      <v-btn nuxt-link to="/Pomodoro" width="250px" style="background-color: #C0C0C0"
+        >カウントダウンタイマーページへ</v-btn
+      >
+    </div>
     <v-card class="text-center">
       <video
         :src="require('@/assets/videos/countdowntimer.mp4')"
